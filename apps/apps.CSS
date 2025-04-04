@@ -1,0 +1,51 @@
+
+body {
+    font-family: Arial, sans-serif; /* Set a default font for the body */
+    background-color: #f4f4f4; /* Light gray background for the body */
+    text-align: center; /* Center text alignment for the body */
+    margin: 20px; /* Add margin around the body */
+}
+.container {
+    max-width: 600px; /* Set a maximum width for the container */
+    margin: auto; /* Center the container */
+    background: white; /* White background for the container */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadonw effect */
+}
+h1 {
+    color: #E63946; /* Dark red color for the heading */
+}
+input {
+    width: 80%; /* Set input width to 80% of the container */
+    padding: 10px; /* Add padding inside the input */
+    margin: 10px 0; /* Add margin above and below the input */
+    border: 1px solid #ccc; /* Light gray border for the input */
+    border-radius: 5px; /* Rounded corners for the input */
+}
+.episode-list {
+    list-style: none; /* Remove default List style */
+    padding: 0; /* Remove default padding */
+}
+.episode-list li {
+    background: #007BFF; /* Blue background for each episode item */
+    color: white; /* White text color for each episode item */
+    padding: 10px; /* Add padding inside each episode item */
+    margin: 5px; /* Add margin between episode items */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Rounded corners for each episode item */
+    transition: background 0.3s; /* Smooth transition for background color */
+}
+.episode-list li:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+.platforms {
+    margin-top: 20px; /* Add margin adove the platforms section */
+}
+.platforms a {
+    display: block; /* Block display for each platform link */
+    color: #007BFF; /* Blue color for platform links */
+    text-decoration: none; /* Remove underLine from Links */
+    margin: 5px; /* Add margin between platform Links */
+    font-weight: bold; /* Bold font for platform Links */
+}

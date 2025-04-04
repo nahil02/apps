@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece episode-list</title>
+    <link rel="stylesheet" href="apps.CSS">
+</head>
+<body>
+    <div class="container">
+        <h1>One Piece Streaming Guide</h1>
+        <p>Regardez tous les épisodes de One Piece en VF légalement.</p>
+
+        <input type="text" id="search" onkeyup="searchEpisode()" placeholder="Rechercher un épisode...">
+
+        <ul id="episode-list" class="episode-list"></ul>
+
+        <div class="platforms">
+            <h3>Regarder légalement sur :</h3>
+            <a href="https://anime-sama.fr/catalogue/one-piece/" target="_blank">anime-sama</a>
+            <a href="https://11anim.com" target="_blank">11anime</a>
+        </div>
+    </div>
+
+    <script>
+        const episodes = [];
+        for (let i = 1; i <= 1120; i++) {
+            episodes.push(`One Piece - Épisode ${i}`);
+        }
+
+        function loadEpisodes() {
+            const list = document.getElementById("episode-list");
+            episodes.forEach(ep => {
+                const li = document.createElement("li");
+                li.textContent = ep;
+                li.onclick = function () {
+                    alert("Regardez cet épisode sur anime-sama, 11anime !");
+                };
+                list.appendChild(li);
+            });
+        }
+
+        function searchEpisode() {
+            const query = document.getElementById("search").value.toLowerCase();
+            const items = document.querySelectorAll("#episode-list li");
+            items.forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(query) ? "block" : "none";
+            });
+        }
+
+        loadEpisodes();
+    </script>
+
+</body>
+</html>
